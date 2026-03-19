@@ -9,34 +9,35 @@
   </head>
   <body>
     <div class="calculadora">
-      <div class="resultado">0</div>
+      <div id="tela" class="tela"></div>
 
       <div class="bloco_botoes">
-        <button class="botao preto_roxo">CE</button>
-        <button class="botao preto">C</button>
-        <button class="botao preto">%</button>
-        <button class="botao roxo">÷</button>
+        <button class="botao preto_roxo" onclick="apagarUltimoNum()">CE</button>
+        <button class="botao preto" onclick="apagar()">C</button>
+        <button class="botao preto" onclick="imprimirValor('%')">%</button>
+        <button class="botao roxo" onclick="imprimirValor('÷')">÷</button>
 
-        <button class="botao preto">7</button>
-        <button class="botao preto">8</button>
-        <button class="botao preto">9</button>
-        <button class="botao roxo">X</button>
+        <button class="botao preto" onclick="imprimirValor('7')">7</button>
+        <button class="botao preto" onclick="imprimirValor('8')">8</button>
+        <button class="botao preto" onclick="imprimirValor('9')">9</button>
+        <button class="botao roxo" onclick="imprimirValor('X')">X</button>
 
-        <button class="botao preto">4</button>
-        <button class="botao preto">5</button>
-        <button class="botao preto">6</button>
-        <button class="botao roxo">-</button>
+        <button class="botao preto" onclick="imprimirValor('4')">4</button>
+        <button class="botao preto" onclick="imprimirValor('5')">5</button>
+        <button class="botao preto" onclick="imprimirValor('6')">6</button>
+        <button class="botao roxo" onclick="imprimirValor('-')">-</button>
 
-        <button class="botao preto">1</button>
-        <button class="botao preto">2</button>
-        <button class="botao preto">3</button>
-        <button class="botao roxo">+</button>
+        <button class="botao preto" onclick="imprimirValor('1')">1</button>
+        <button class="botao preto" onclick="imprimirValor('2')">2</button>
+        <button class="botao preto" onclick="imprimirValor('3')">3</button>
+        <button class="botao roxo" onclick="imprimirValor('+')">+</button>
 
-        <button class="botao preto">+/-</button>
-        <button class="botao preto">0</button>
-        <button class="botao preto">,</button>
-        <button class="botao roxo_claro">=</button>
+        <button class="botao preto" onclick="inverteOperador()">+/-</button>
+        <button class="botao preto" onclick="imprimirValor('0')">0</button>
+        <button class="botao preto" onclick="imprimirValor(',')">,</button>
+        <button class="botao roxo_claro" onclick="resultado()">=</button>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

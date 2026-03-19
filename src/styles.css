@@ -29,7 +29,7 @@ body {
   height: 566px;
 }
 
-.resultado {
+.tela {
   color: white;
   font-size: 40px;
   font-weight: 500;
@@ -37,8 +37,7 @@ body {
   height: 120px;
   text-align: end;
   padding-top: 54px;
-  padding-left: 36px;
-  width: 288px;
+  overflow-x: hidden;
 }
 
 .botao {
