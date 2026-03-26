@@ -30,6 +30,13 @@ function imprimirValor(valor) {
     return;
   }
 
+  if (operadores.includes(valor)) {
+    const ultimoChar = tela.textContent[tela.textContent.length - 1];
+    if (operadores.includes(ultimoChar)) {
+      return;
+    }
+  }
+
   if (valor === ",") {
     const expressaoAtual = tela.textContent;
     const separadores = ["+", "-", "x", "÷", "%"];
@@ -72,9 +79,9 @@ function resultado() {
     conta = processarPorcentagem(conta);
   }
 
-  conta = conta.replace("x", "*");
-  conta = conta.replace("÷", "/");
-  conta = conta.replace(",", ".");
+  conta = conta.replace(/x/g, "*");
+  conta = conta.replace(/÷/g, "/");
+  conta = conta.replace(/,/g, ".");
 
   try {
     let resultado = eval(conta);
